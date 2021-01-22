@@ -68,7 +68,7 @@ namespace Translator
             };
             var response = client.ListGlossaries(request);
             // Iterate over glossaries and display each glossary's details.
-
+            
             return response.Select(x =>
                 $"name: {x.Name}, Entry count: {x.EntryCount}, Input URI: {x.InputConfig.GcsSource.InputUri}").ToList();
         }

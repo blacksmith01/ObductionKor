@@ -23,7 +23,7 @@ namespace Translator
                 if (commands == null || commands.Length <= 0)
                     return;
 
-                var api = new GoogleApi(Settings.Google.ProjectId, Settings.Google.LocationId, await File.ReadAllTextAsync("GoogleKey.json"));
+                var api = new GoogleApi(Settings.Google.ProjectId, Settings.Google.LocationId, await File.ReadAllTextAsync(Settings.Google.JsonKeyFilePath));
 
                 switch (commands[0])
                 {
